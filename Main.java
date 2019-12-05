@@ -40,9 +40,7 @@ public class Main extends Application {
             launch(args);
         }
         
-        // test existing model classes with temporary console interface driver
-        //ProgramDriver.testProgramWithConsoleInterface();
-        //System.exit(0); // required to exit when there is no GUI exit
+
     }
 
 }
