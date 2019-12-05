@@ -24,6 +24,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
+import javafx.scene.text.Font;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -286,10 +287,11 @@ public class MainWindowController implements Initializable {
     // Helper method
     private VBox buildFlashCard(FlashCard card) {
         flashcardDisplayBox = new VBox(15); // spacing between children
-        flashcardDisplayBox.setPadding(new Insets(100, 50, 180, 50));
+        flashcardDisplayBox.setPadding(new Insets(100, 50, 180, 100));
         flashcardDisplayBox.setAlignment(Pos.CENTER);
         
         Label question = new Label(card.getQuestion());
+        question.setFont(Font.font("Verdana",20)); // make the font bigger so users can read it easily
         TextField answer = new TextField();
         Button checkBtn = new Button("Check Answer");
         checkBtn.setOnAction((ActionEvent event) -> 
